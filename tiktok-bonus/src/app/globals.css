@@ -1,0 +1,193 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* =========================
+   FONT
+   ========================= */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+
+/* =========================
+   THEME VARIABLES
+   ========================= */
+:root {
+  --background: 0 0% 94%;
+  --foreground: 0 0% 10%;
+  --card: 0 0% 100%;
+  --primary: 346 70% 50%;
+  --secondary: 40 80% 45%;
+  --accent: 346 70% 50%;
+  --border: 0 0% 85%;
+  --radius: 0.75rem;
+}
+
+/* =========================
+   RESET
+   ========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =========================
+   BODY
+   ========================= */
+body {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: #e8e8e8;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* =========================
+   TAILWIND BASE LAYER
+   ========================= */
+@layer base {
+  * {
+    @apply border-border;
+  }
+}
+
+/* =========================
+   BUTTONS
+   ========================= */
+.btn-sacar {
+  background: linear-gradient(135deg, #ff4d6d 0%, #da2b53 100%);
+  color: #ffffff;
+  border-radius: 20px;
+  padding: 8px 24px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(218, 43, 83, 0.3);
+}
+
+.btn-sacar:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(218, 43, 83, 0.4);
+}
+
+.btn-obrigado {
+  background: linear-gradient(135deg, #ff4d6d 0%, #da2b53 100%);
+  color: #ffffff;
+  border-radius: 12px;
+  padding: 16px 40px;
+  font-size: 18px;
+  font-weight: 600;
+  width: 100%;
+  max-width: 320px;
+}
+
+.btn-concluido {
+  background: #f0f0f0;
+  color: #999999;
+  border-radius: 16px;
+  padding: 6px 16px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: default;
+}
+
+/* =========================
+   TEXT / COLORS
+   ========================= */
+.gold-text {
+  color: #d4a520;
+  font-weight: 600;
+}
+
+/* =========================
+   CARD
+   ========================= */
+.card-section {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 16px;
+  margin-bottom: 4px;
+}
+
+/* =========================
+   MODAL
+   ========================= */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+.modal-content {
+  background: linear-gradient(180deg, #fdfcf0 0%, #ffffff 100%);
+  border-radius: 24px;
+  padding: 32px 24px;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+/* =========================
+   TIMER
+   ========================= */
+.timer-box {
+  background: #f5f5f5;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+/* =========================
+   DAY CHECK-IN
+   ========================= */
+.day-box {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: #f0f0f0;
+  color: #999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+
+.day-box.completed {
+  background: #22c55e;
+  color: #ffffff;
+}
+
+/* =========================
+   PROGRESS / POINTS
+   ========================= */
+.progress-coin {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 14px;
+  color: #999999;
+}
+
+/* =========================
+   STICKY POPUP (optional)
+   ========================= */
+.sticky-popup {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #ffffff;
+  padding: 16px;
+  z-index: 50;
+  display: none;
+}
